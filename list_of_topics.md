@@ -1,8 +1,9 @@
 #List of seminars:
 
-* Basic Python and interactive computing with IPython
-    - installing Python
+* Basic Python and interactive computing with IPython [Yann]
+    - installing Python (Anaconda) 
     - ipython notebook
+    - ipython qtconsole
 
 * Basic Python 2:
     - tuples, lists, dictionaries
@@ -22,7 +23,7 @@
 * data-vis with matplotlib (Bartosz)
     - svg_utils
 
-* analytical work with the help of Sympy  (Yann, but i'm not an expert)
+* analytical work with the help of Sympy  [Yann]
     - symbolic computation
     - link with the SciPy environment
      (your results back in matplotlib and numpy)
