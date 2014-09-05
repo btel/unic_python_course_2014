@@ -8,7 +8,7 @@
     - tuples, lists, dictionaries
     - iterators and list comprehensions
 
-* Organising projects: 
+* Organising projects: [Andrew]
     - scripts, modules, packages
     - installing modules via pip, virtualenv
 
@@ -27,7 +27,7 @@
     - link with the SciPy environment
      (your results back in matplotlib and numpy)
 
-* debugging and unit testing
+* debugging and unit testing [Andrew]
 
 * optimising your code:
     - where is the bottleneck: RAM, HDD, CPU?
@@ -45,7 +45,7 @@
 * Working with structured data:
     * data frame and pandas
 
-* Python for neuroscientists: 
+* Python for neuroscientists: [Andrew]
     - neo
     - PyNN
 
