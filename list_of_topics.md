@@ -22,6 +22,11 @@
 * data-vis with matplotlib (Bartosz)
     - svg_utils
 
+* analytical work with the help of Sympy  (Yann, but i'm not an expert)
+    - symbolic computation
+    - link with the SciPy environment
+     (your results back in matplotlib and numpy)
+
 * debugging and unit testing
 
 * optimising your code:
