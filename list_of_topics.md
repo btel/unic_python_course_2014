@@ -1,7 +1,7 @@
 #List of seminars:
 
 * Basic Python and interactive computing with IPython
-    - installing Python
+    - installing Python (anaconda)
     - ipython notebook
 
 * Basic Python 2:
