@@ -4,6 +4,8 @@
     - installing Python (Anaconda) 
     - ipython notebook
     - ipython qtconsole
+    - matplotlib plot
+    - documentation
 
 * Basic Python 2:
     - tuples, lists, dictionaries
