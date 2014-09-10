@@ -7,19 +7,19 @@
     - matplotlib plot
     - documentation
 
-* Basic Python 2:
+* Basic Python 2 [Xoana]:
     - tuples, lists, dictionaries
-    - iterators and list comprehensions
+    - slices, iterators and list comprehensions
 
 * Organising projects: [Andrew]
     - scripts, modules, packages
     - installing modules via pip, virtualenv
 
-* numpy:
+* numpy basics [Jan]:
     - arrays,
     - ufuns
     - broadcasting
-    - dtypes, structured arrays
+    - dtypes
     - basic storage
 
 * data-vis with matplotlib (Bartosz)
