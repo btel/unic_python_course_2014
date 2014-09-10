@@ -44,7 +44,7 @@
     - contributing to FOSS projects
 
 * Working with structured data:
-    * data frame and pandas
+    - data frame and pandas
 
 * Python for neuroscientists: [Andrew]
     - neo
@@ -53,3 +53,14 @@
 * from experiments to papers: organising data processing workflows
 
 * tracking results of simulations in sumatra [Andrew]
+
+#Other topics:
+
+* statistics:
+    - scipy.stats
+    - Rpy
+    - statsmodels
+
+* machine learning with scikits-learn
+
+* migration from Matlab
