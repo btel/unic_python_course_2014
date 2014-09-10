@@ -37,10 +37,8 @@
     - profiling
     - basic performance tricks
 
-* code version control, working with git locally 
+* code version control:
     - add/commit/checkout/branch/merge
-
-* code sharing and collaboration:
     - git push/pull
     - GitHub/Bitbucket: forks, pull requests
     - contributing to FOSS projects
