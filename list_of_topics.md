@@ -17,6 +17,7 @@
 
 * numpy basics [Jan]:
     - arrays,
+    - difference between lists, dictionaries and arrays
     - ufuns
     - broadcasting
     - dtypes
