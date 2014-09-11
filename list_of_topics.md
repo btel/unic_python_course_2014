@@ -68,4 +68,4 @@
     - reading mat files
     - differences between Python and Matlab
     - matlab-like IDEs for Python
-    - python-matlab bridge (like this (one)[https://github.com/arokem/python-matlab-bridge])
+    - python-matlab bridge (like this [one](https://github.com/arokem/python-matlab-bridge))
