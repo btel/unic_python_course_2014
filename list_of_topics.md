@@ -64,4 +64,8 @@
 
 * machine learning with scikits-learn
 
-* migration from Matlab
+* migration from Matlab:
+    - reading mat files
+    - differences between Python and Matlab
+    - matlab-like IDEs for Python
+    - python-matlab bridge (like this (one)[https://github.com/arokem/python-matlab-bridge])
