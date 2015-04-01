@@ -10,6 +10,7 @@ We are delighted to see that so many of you use or plan to use Python. To help y
 
 Although the course will be Python-centered, many of the techniques we will cover can be applied in other programming languages (like Elphy or Matlab).
 
+Please check the [list of topics](list_of_topics.md) and [contributed notebooks](http://nbviewer.ipython.org/github/btel/unic_python_course_2014/tree/master/notebooks/).
 
 #Contributing to the repository
 
