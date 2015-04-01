@@ -1,13 +1,13 @@
 #List of seminars:
 
-* Basic Python and interactive computing with IPython [Yann]
+* [Basic Python and interactive computing with IPython](http://nbviewer.ipython.org/github/btel/unic_python_course_2014/blob/master/notebooks/01_ipython.ipynb) [Yann]
     - installing Python (Anaconda) 
     - ipython notebook
     - ipython qtconsole
     - matplotlib plot
     - documentation
 
-* Basic Python 2 [Xoana]:
+* [Basic Python 2](http://nbviewer.ipython.org/github/btel/unic_python_course_2014/blob/master/notebooks/02_basic_python.ipynb) [Jean-Marie]:
     - tuples, lists, dictionaries
     - slices, iterators and list comprehensions
 
