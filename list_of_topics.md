@@ -11,6 +11,9 @@
     - tuples, lists, dictionaries
     - slices, iterators and list comprehensions
 
+* [data-vis with matplotlib](http://nbviewer.ipython.org/github/btel/unic_python_course_2014/blob/master/notebooks/03_matplotlib_tutorial.ipynb) (Bartosz)
+    - svg_utils
+
 * Organising projects: [Andrew]
     - scripts, modules, packages
     - installing modules via pip, virtualenv
@@ -23,8 +26,6 @@
     - dtypes
     - basic storage
 
-* data-vis with matplotlib (Bartosz)
-    - svg_utils
 
 * analytical work with the help of Sympy  [Yann]
     - symbolic computation
