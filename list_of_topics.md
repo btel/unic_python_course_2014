@@ -14,6 +14,10 @@
 * [data-vis with matplotlib](http://nbviewer.ipython.org/github/btel/unic_python_course_2014/blob/master/notebooks/03_matplotlib_tutorial.ipynb) (Bartosz)
     - svg_utils
 
+* [Python for neuroscientists](http://nbviewer.ipython.org/github/btel/unic_python_course_2014/blob/master/notebooks/05_elephant_neo.ipynb) (Andrew)
+    - neo
+    - elephant
+
 * Organising projects: [Andrew]
     - scripts, modules, packages
     - installing modules via pip, virtualenv
@@ -48,9 +52,6 @@
 * Working with structured data:
     - data frame and pandas
 
-* Python for neuroscientists: [Andrew]
-    - neo
-    - PyNN
 
 * from experiments to papers: organising data processing workflows
 
