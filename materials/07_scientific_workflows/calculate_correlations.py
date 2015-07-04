@@ -13,6 +13,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('spike_file')
+parser.add_argument('--save')
 
 args = parser.parse_args()
 fname = args.spike_file 
@@ -33,4 +34,8 @@ plt.hist(corr_coefs, 10)
 plt.xlabel('correlation coefficient')
 plt.ylabel('number of pairs')
 
-plt.show()
+if args.save:
+    np.savez(args.save,
+             corr_coefs=corr_coefs)
+else:
+    plt.show()
