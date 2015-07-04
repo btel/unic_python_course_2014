@@ -8,8 +8,6 @@ from quantities import ms, Hz
 
 from elephant.spike_train_generation import homogeneous_gamma_process
 
-from elephant.spike_train_correlation import corrcoef
-from elephant.conversion import BinnedSpikeTrain
 
 import neo 
 
