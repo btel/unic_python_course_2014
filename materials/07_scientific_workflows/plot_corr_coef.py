@@ -9,6 +9,7 @@ from itertools import cycle
 
 parser = argparse.ArgumentParser()
 parser.add_argument('corr_file', nargs='+')
+parser.add_argument('--save-fig')
 args = parser.parse_args()
 bin_width = 0.02
 
@@ -25,4 +26,7 @@ for filename in args.corr_file:
 plt.xlabel('correlation coefficient')
 plt.ylabel('number of pairs')
 
-plt.show()
+if args.save_fig:
+    plt.savefig(args.save_fig)
+else:
+    plt.show()
