@@ -9,7 +9,15 @@ from quantities import ms
 from elephant.spike_train_correlation import corrcoef
 from elephant.conversion import BinnedSpikeTrain
 
-data = neo.AsciiSpikeTrainIO(filename='data/v1_session_0.txt')
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('spike_file')
+
+args = parser.parse_args()
+fname = args.spike_file 
+
+data = neo.AsciiSpikeTrainIO(filename=fname)
 
 seg = data.read_segment()
 spiketrains = seg.spiketrains
