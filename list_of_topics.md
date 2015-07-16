@@ -18,6 +18,12 @@
     - neo
     - elephant
 
+* Code version control (Xoana):
+    - add/commit/checkout/branch/merge
+    - git push/pull
+    - GitHub/Bitbucket: forks, pull requests
+    - contributing to FOSS projects
+
 * Organising projects: [Andrew]
     - scripts, modules, packages
     - installing modules via pip, virtualenv
@@ -43,15 +49,8 @@
     - profiling
     - basic performance tricks
 
-* code version control:
-    - add/commit/checkout/branch/merge
-    - git push/pull
-    - GitHub/Bitbucket: forks, pull requests
-    - contributing to FOSS projects
-
 * Working with structured data:
     - data frame and pandas
-
 
 * from experiments to papers: organising data processing workflows
 
