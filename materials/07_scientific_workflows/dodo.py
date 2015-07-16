@@ -4,33 +4,40 @@
 import glob
 import os
 
-data_files = glob.glob('data/*.txt')
+lgn_sessions = ['data/lgn_session_{}.txt'.format(i) for i in range(5)]
+v1_sessions = ['data/v1_session_{}.txt'.format(i) for i in range(5)]
+
+data_files = lgn_sessions + v1_sessions
+
+lgn_results = [os.path.join('results', os.path.split(p)[-1]) + '.npz' 
+               for p in lgn_sessions]
+
+v1_results = [os.path.join('results', os.path.split(p)[-1]) + '.npz' 
+               for p in v1_sessions]
+
+correlation_files = lgn_results + v1_results
 
 def task_analysis():
-    targets = [os.path.join('results', os.path.splitext(os.path.split(f)[1])[0]+'.npz')
-               for f in data_files]
 
-    for inp, out in zip(data_files, targets):
+    for inp, out in zip(data_files, correlation_files):
         yield {
             'actions' : ['python calculate_correlations.py {} --save {}'.format(inp, out)],
-            'file_dep' : [inp],
+            'file_dep' : [inp, 'calculate_correlations.py'],
             'targets' : [out],
-            'name' : 'analysis_' + inp
+            'name' :  inp
             }
 
 def task_merge_lgn_data():
-    input_file = ['results/lgn_session_{}.npz'.format(i) for i in range(5)]
     return {
-         'actions' : ['python merge_correlations.py %(dependencies)s --save %(targets)s'],
-         'file_dep' : input_file,
+         'actions' : ['python merge_correlations.py {} --save %(targets)s'.format(' '.join(lgn_results))],
+         'file_dep' : ['merge_correlations.py'] + lgn_results,
          'targets' : ['results/lgn_pooled_correlations.npz']
          }
 
 def task_merge_v1_data():
-    input_file = ['results/v1_session_{}.npz'.format(i) for i in range(5)]
     return {
-         'actions' : ['python merge_correlations.py %(dependencies)s --save %(targets)s'],
-         'file_dep' : input_file,
+         'actions' : ['python merge_correlations.py {} --save %(targets)s'.format(' '.join(v1_results))],
+         'file_dep' : ['merge_correlations.py'] + v1_results,
          'targets' : ['results/v1_pooled_correlations.npz']
          }
 
@@ -39,5 +46,5 @@ def task_make_plot():
          'actions' : ['python plot_corr_coef.py %(dependencies)s --save-fig %(targets)s'],
          'file_dep' : ['results/v1_pooled_correlations.npz',
                        'results/lgn_pooled_correlations.npz'],
-         'targets' : ['results/correlation_plot.png']
-         
+         'targets' : ['figures/correlation_plot.svg']
+        }
