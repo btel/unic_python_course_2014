@@ -1,0 +1,56 @@
+Scientific workflows
+
+# example:
+
+• distribution of pairwise correlations
+
+# Outline
+
+* what is a scientific workflow
+* points to remember:
+   - programming in general is an iterative process
+   - keep it simple stupid
+   - repetition is the root of all evil
+   - program to interfaces
+* three components of scientific workflow:
+   - data generation (simulation, pre-processing)
+   - statistics
+   - plots
+* two stages of data analysis:
+   - exploratory on a single (or a few) datasets
+   - batch analysis
+* writing simple command line tools
+   - argparse
+   - avoid changes in API
+* saving data to files:
+   - csv
+   - compare pickle and npz
+* writing meta-scripts in bash/python
+* running batch analyses
+* using automatic builders (doit)
+
+# Plan:
+
+1) Single cell analysis
+
+   * write simple script to read data, calculate correlation coefficients and plot their histogram
+   * use argparse to specify the input filename from the command line
+
+2) Building first workflow
+
+   * allow to write correlation coefficients to file
+   * seperate plotting and analysis
+
+2) Batch processing
+
+   * write data merge script
+   * write python script using subprocess, which run the correlation analysis on all its input files
+   * allow to plot histograms from more than one file
+
+3) Automating
+
+   * write dodo.py which runs the batch analysis on V1 data - define input files by hand
+   * add an extra input file to dependency list and show that the task will be automatically re-executed
+   * add plotting task based on v1 data only
+   * (optional) implement partially the batch run in the dodo file
+   * (optional) use task generators to avoid code duplicaton
