@@ -2,21 +2,32 @@
 #coding=utf-8
 
 import glob
+import os
 
-def task_v1_analysis():
-    input_files = glob.glob('data/v1_session_*.txt')
+def task_analysis():
+    input_files = glob.glob('data/*.txt')
+    targets = [os.path.join('results', os.path.splitext(os.path.split(f)[1])[0]+'.npz')
+               for f in input_files]
     return {
-        'actions' : ['python batch_correlation.py %(dependencies)s --save %(targets)s'],
+        'actions' : ['python batch_correlation.py %(dependencies)s'],
         'file_dep' : input_files,
-        'targets' : ['results/v1_pooled_correlations.npz']
+        'targets' : targets
         }
 
-def task_lgn_analysis():
-    input_files = glob.glob('data/lgn_session_*.txt')
+def task_merge_lgn_data():
+    input_file = glob.glob('results/lgn_session*.npz')
     return {
-         'actions' : ['python batch_correlation.py %(dependencies)s --save %(targets)s'],
-         'file_dep' : input_files,
+         'actions' : ['python merge_correlations.py %(dependencies)s --save %(targets)s'],
+         'file_dep' : input_file,
          'targets' : ['results/lgn_pooled_correlations.npz']
+         }
+
+def task_merge_v1_data():
+    input_file = glob.glob('results/v1_session*.npz')
+    return {
+         'actions' : ['python merge_correlations.py %(dependencies)s --save %(targets)s'],
+         'file_dep' : input_file,
+         'targets' : ['results/v1_pooled_correlations.npz']
          }
 
 def task_make_plot():
